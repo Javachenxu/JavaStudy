@@ -1,4 +1,8 @@
 package testspace;
+/**
+ * 二维数组示例： JAVA中没有真正的多维数组，本质还是数组中的元素还是数组。
+ * 3个班级各3个学员成绩，记录每个学员的平均成绩，并计算平均分。
+ */
 import java.util.Scanner;
 public class Test10 {
     public static void main(String[] args) {
