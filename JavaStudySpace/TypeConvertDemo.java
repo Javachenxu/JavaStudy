@@ -15,7 +15,7 @@ public class TypeConvertDemo {
 
         //表达式类型自动提升
         System.out.println("------------------");
-        double result = 123 + 3.14 + 3.15f + 100l;
+        double result = 123 + 3.14 + 3.15f + 100L;
 
     }
 }
