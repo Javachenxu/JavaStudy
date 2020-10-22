@@ -24,10 +24,12 @@ public class ArrayOperateDemo3 {
         ret += "]";
         System.out.println(ret);
     }
+    //逆序打印数组
     static String[] reverse(String[] oldArr) {
         //存储一个新的数组，存储颠倒之后的元素
         String[] newArr = new String[oldArr.length];
         for (int index = oldArr.length - 1; index >= 0; index--) {
+            //
             newArr[oldArr.length - 1 - index] = oldArr[index];
         }
         return newArr;
