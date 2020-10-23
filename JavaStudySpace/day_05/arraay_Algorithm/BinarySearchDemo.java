@@ -12,8 +12,6 @@ public class BinarySearchDemo {
         int low = 0;//最小的索引
         int high = arr.length - 1;//最大的索引
         while (low <= high) {
-            int i = 1;
-            System.out.println("查询了第"+ i+"次");
             int mid = (low + high) >> 1;
             int midVal = arr[mid];
             if (midVal > key) {//猜打了
@@ -23,7 +21,6 @@ public class BinarySearchDemo {
             } else {
                 return mid;
             }
-            i++;
         }
         return -1;
     }
