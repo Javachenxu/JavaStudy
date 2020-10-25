@@ -28,7 +28,7 @@ class Circle{
         } else if (xxyy < rr) {
             return -1;
         } else {
-            return
+            return 0;
         } 
     }
 }
