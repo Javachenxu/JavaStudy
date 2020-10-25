@@ -11,11 +11,15 @@ class Penguin extends bird{
     public void fly() {
         System.out.println("不能飞");
     }
+    public void say() {
+        System.out.println("唱歌");
+        super.fly();
+    }
 }
 public class OverrideDemo {
     public static void main(String[] args) {
         Penguin p = new Penguin();
-        p.fly();
+        p.say();
 
     }
 }
