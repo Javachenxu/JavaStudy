@@ -9,6 +9,13 @@ class Dog extends Animal{
         System.out.println("吃肉");
     }
 }
+//饲养员类
+class Person{
+    public void feed(Animal a) {
+        System.out.println("喂食...");
+        a.eat();
+    }
+}
 //
 class Cat extends Animal{
     public void eat() {
@@ -21,5 +28,10 @@ public class AnimalDemo {
         a.eat();
         a = new Cat();
         a.eat();
+        //创建饲养员对象
+        Person p = new Person();
+        Animal d = new Dog();
+        p.feed(d);
+
     }
 }
