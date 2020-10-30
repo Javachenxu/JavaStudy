@@ -1,4 +1,5 @@
 package _01_why;
+
 class Car{
 	public static final int NO_OK = 0;
 	public static final int OK = 1;
