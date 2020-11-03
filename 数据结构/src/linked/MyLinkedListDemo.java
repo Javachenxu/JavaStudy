@@ -1,5 +1,5 @@
 package linked;
-
+//测试类
 public class MyLinkedListDemo {
 
 	public static void main(String[] args) {
