@@ -1,6 +1,5 @@
 package com.cx.team.domain;
 
-import com.cx.team.service.Status;
 
 public class Designer extends Programmer {
 	private double bonus;//奖金
@@ -25,7 +24,12 @@ public class Designer extends Programmer {
 	@Override
 	public String toString() {
 		
-		return getDetails() + "设计师" + "\t" + getStatus()
+		return getDetails() + "\t设计师\t" + getStatus()
 		+ "\t" + bonus + "\t\t" + getEquipment().getDescription();
+	}
+	
+	
+	public String getDetailsForTeam() {
+		return getTeamBaseDetails() + "\t设计师\t" + getBonus();
 	}
 }
