@@ -33,7 +33,14 @@ public class Programmer extends Employee {
 	}
 	@Override
 	public String toString() {
-		return getDetails() + "\t程序员" + status + "\t\t\t" + equipment.getDescription();
+		return getDetails() + "\t程序员\t" + status + "\t\t\t" + equipment.getDescription();
 	}
 	
+	public String getTeamBaseDetails() {
+		return getMemberId() + "/" + getId() + "\t" + getName() + "\t" + getAge() + "\t" + getSalary() ;
+	}
+	
+	public String getDetailsForTeam() {
+		return getTeamBaseDetails() + "\t程序员\t";
+	}
 }
