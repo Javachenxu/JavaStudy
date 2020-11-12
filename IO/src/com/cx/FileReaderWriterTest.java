@@ -41,7 +41,7 @@ public class FileReaderWriterTest {
 		//创建相应的输出流，将File类的对象作为参数，传入流的构造器中
 		FileWriter fw = null;
 		try {
-			//创建File类的对象，指明写入的数据的位置。
+			//创建File类的对象，指明写入的数据的位置。（可以不存在，如果不存在会创建一个新的）
 			File file = new File("hello1.txt");
 			fw = new FileWriter(file);
 			//写出操作
@@ -57,6 +57,48 @@ public class FileReaderWriterTest {
 					fw.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	@Test
+	public void testFileReaderFileWriter() {
+		
+		FileReader fr = null;
+		FileWriter fw = null;
+		
+		try {
+			//创建File类的对象，指明要复制的文件和要粘贴的文件位置。
+			File srcFile = new File("hello1.txt");
+			File destFile = new File("hello2.txt");
+			//创建输入流和输出流
+			fr = new FileReader(srcFile);
+			fw = new FileWriter(destFile);
+			//数据的读出和写入操作
+			char[] cbuf = new char[5];
+			int len;//记录每次读入到cbuf数组中的字符的个数
+			while ((len = fr.read(cbuf)) != -1) {
+				//每次写出len个字符
+				fw.write(cbuf,0,len);
+			} 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			//关闭流资源
+			try {
+				if (fr != null)
+					fr.close();
+			} catch (IOException e) {
+				
+				e.printStackTrace();
+			}
+			try {
+				if (fw != null)
+					fw.close();
+			} catch (IOException e) {
+				
 				e.printStackTrace();
 			}
 		}
