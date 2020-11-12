@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test;
 public class TestStep {
 	@Test
 	public void test(){
-		System.out.println(fn(3));
+		System.out.println(fn(1));
 	}
+	//递归
 	//实现f(n):求n步台阶，一共有几种走法
 	public int fn(int n) {
 		if (n < 1) {
