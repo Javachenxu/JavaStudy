@@ -84,8 +84,7 @@ public class FileReaderWriterTest {
 			} 
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			//关闭流资源
 			try {
 				if (fr != null)
